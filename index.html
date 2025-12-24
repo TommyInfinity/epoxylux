@@ -2,40 +2,19 @@
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <meta name="theme-color" content="#0a0a0f">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Epoxy Lux - Exkluzív Epoxy Ékszerek</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epoxy Lux - Exkluzív Epoxy Ékszerek és Díszek</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
-        <div class="mobile-menu">
-            <button class="mobile-menu-close" id="closeMenu">&times;</button>
-            <nav class="mobile-nav">
-                <a href="#home" class="mobile-nav-link" onclick="closeMobileMenu()">Kezdőlap</a>
-                <a href="#kollekcio" class="mobile-nav-link" onclick="closeMobileMenu()">Kollekciók</a>
-                <a href="#rolunk" class="mobile-nav-link" onclick="closeMobileMenu()">Rólunk</a>
-                <a href="#kapcsolat" class="mobile-nav-link" onclick="closeMobileMenu()">Kapcsolat</a>
-            </nav>
-        </div>
-    </div>
-
-    <!-- Header -->
+    <!-- Navigációs sáv -->
     <header class="header">
         <div class="container">
-            <button class="mobile-menu-btn" id="menuBtn" aria-label="Menü">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
             <div class="logo">
                 <h1>EPOXY LUX</h1>
                 <span class="tagline">Exkluzív Ékszerek</span>
             </div>
-            <nav class="nav desktop-only">
+            <nav class="nav">
                 <a href="#home" class="nav-link active">Kezdőlap</a>
                 <a href="#kollekcio" class="nav-link">Kollekciók</a>
                 <a href="#rolunk" class="nav-link">Rólunk</a>
@@ -60,36 +39,36 @@
         </div>
     </header>
 
-    <!-- Hero -->
+    <!-- Hero szekció -->
     <section id="home" class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h2 class="hero-title">Luxus Epoxy Ékszerek</h2>
-            <p class="hero-subtitle">Kézzel készített, egyedi darabok</p>
-            <button class="btn btn-primary" onclick="scrollToProducts()">Fedezd fel</button>
+            <p class="hero-subtitle">Kézzel készített, egyedi darabok a kifinomult ízlésűeknek</p>
+            <button class="btn btn-primary" onclick="scrollToProducts()">Fedezd fel a kollekciót</button>
         </div>
         <div class="scroll-indicator">
             <div class="mouse"></div>
         </div>
     </section>
 
-    <!-- Quick Categories -->
+    <!-- Kategóriák -->
     <section class="categories">
         <div class="container">
             <div class="category-grid">
-                <div class="category-card" data-category="nyaklanc" onclick="filterCategory('nyaklanc')">
+                <div class="category-card" data-category="nyaklanc">
                     <div class="category-icon">💎</div>
                     <h3>Nyakláncok</h3>
                 </div>
-                <div class="category-card" data-category="gyuru" onclick="filterCategory('gyuru')">
+                <div class="category-card" data-category="gyuru">
                     <div class="category-icon">💍</div>
                     <h3>Gyűrűk</h3>
                 </div>
-                <div class="category-card" data-category="fulbevalo" onclick="filterCategory('fulbevalo')">
+                <div class="category-card" data-category="fulbevalo">
                     <div class="category-icon">✨</div>
                     <h3>Fülbevalók</h3>
                 </div>
-                <div class="category-card" data-category="diszek" onclick="filterCategory('diszek')">
+                <div class="category-card" data-category="diszek">
                     <div class="category-icon">🎨</div>
                     <h3>Díszek</h3>
                 </div>
@@ -97,18 +76,18 @@
         </div>
     </section>
 
-    <!-- Products -->
+    <!-- Termékek -->
     <section id="kollekcio" class="products">
         <div class="container">
             <h2 class="section-title">Kiemelt Kollekciók</h2>
             <div class="product-grid" id="productGrid">
-                <article class="product-card" data-product="1" data-category="nyaklanc">
+                <!-- Termék 1 -->
+                <article class="product-card" data-product="1">
                     <div class="product-image">
                         <div class="product-badge">ÚJ</div>
                         <div class="product-img-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
                             <span class="placeholder-text">Epoxy Nyaklánc</span>
                         </div>
-                        <button class="quick-view-btn" onclick="quickView(1)">Gyors nézet</button>
                     </div>
                     <div class="product-info">
                         <h3 class="product-title">Gleam Noir Nyaklánc</h3>
@@ -116,48 +95,38 @@
                         <div class="product-footer">
                             <span class="product-price">149 900 Ft</span>
                             <button class="btn-add-cart" onclick="addToCart(1, 'Gleam Noir Nyaklánc', 149900)">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                                    <path d="M16 10a4 4 0 0 1-8 0"></path>
-                                </svg>
-                                <span class="desktop-only">Kosárba</span>
+                                Kosárba
                             </button>
                         </div>
                     </div>
                 </article>
 
-                <article class="product-card" data-product="2" data-category="gyuru">
+                <!-- Termék 2 -->
+                <article class="product-card" data-product="2">
                     <div class="product-image">
                         <div class="product-img-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
                             <span class="placeholder-text">Epoxy Gyűrű</span>
                         </div>
-                        <button class="quick-view-btn" onclick="quickView(2)">Gyors nézet</button>
                     </div>
                     <div class="product-info">
                         <h3 class="product-title">Aurora Borealis Gyűrű</h3>
-                        <p class="product-desc">Lila-rózsaszín árnyalatok</p>
+                        <p class="product-desc">Lila-rózsaszín árnyalatok színjátéka</p>
                         <div class="product-footer">
                             <span class="product-price">89 900 Ft</span>
                             <button class="btn-add-cart" onclick="addToCart(2, 'Aurora Borealis Gyűrű', 89900)">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                                    <path d="M16 10a4 4 0 0 1-8 0"></path>
-                                </svg>
-                                <span class="desktop-only">Kosárba</span>
+                                Kosárba
                             </button>
                         </div>
                     </div>
                 </article>
 
-                <article class="product-card" data-product="3" data-category="fulbevalo">
+                <!-- Termék 3 -->
+                <article class="product-card" data-product="3">
                     <div class="product-image">
                         <div class="product-badge bestseller">BESTSELLER</div>
                         <div class="product-img-placeholder" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
                             <span class="placeholder-text">Epoxy Fülbevaló</span>
                         </div>
-                        <button class="quick-view-btn" onclick="quickView(3)">Gyors nézet</button>
                     </div>
                     <div class="product-info">
                         <h3 class="product-title">Ocean Wave Fülbevaló</h3>
@@ -165,23 +134,18 @@
                         <div class="product-footer">
                             <span class="product-price">79 900 Ft</span>
                             <button class="btn-add-cart" onclick="addToCart(3, 'Ocean Wave Fülbevaló', 79900)">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                                    <path d="M16 10a4 4 0 0 1-8 0"></path>
-                                </svg>
-                                <span class="desktop-only">Kosárba</span>
+                                Kosárba
                             </button>
                         </div>
                     </div>
                 </article>
 
-                <article class="product-card" data-product="4" data-category="diszek">
+                <!-- Termék 4 -->
+                <article class="product-card" data-product="4">
                     <div class="product-image">
                         <div class="product-img-placeholder" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
                             <span class="placeholder-text">Epoxy Dísz</span>
                         </div>
-                        <button class="quick-view-btn" onclick="quickView(4)">Gyors nézet</button>
                     </div>
                     <div class="product-info">
                         <h3 class="product-title">Sunset Crystal Dísztárgy</h3>
@@ -189,23 +153,18 @@
                         <div class="product-footer">
                             <span class="product-price">129 900 Ft</span>
                             <button class="btn-add-cart" onclick="addToCart(4, 'Sunset Crystal Dísztárgy', 129900)">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                                    <path d="M16 10a4 4 0 0 1-8 0"></path>
-                                </svg>
-                                <span class="desktop-only">Kosárba</span>
+                                Kosárba
                             </button>
                         </div>
                     </div>
                 </article>
 
-                <article class="product-card" data-product="5" data-category="nyaklanc">
+                <!-- Termék 5 -->
+                <article class="product-card" data-product="5">
                     <div class="product-image">
                         <div class="product-img-placeholder" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
                             <span class="placeholder-text">Epoxy Karkötő</span>
                         </div>
-                        <button class="quick-view-btn" onclick="quickView(5)">Gyors nézet</button>
                     </div>
                     <div class="product-info">
                         <h3 class="product-title">Pastel Dream Karkötő</h3>
@@ -213,24 +172,19 @@
                         <div class="product-footer">
                             <span class="product-price">99 900 Ft</span>
                             <button class="btn-add-cart" onclick="addToCart(5, 'Pastel Dream Karkötő', 99900)">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                                    <path d="M16 10a4 4 0 0 1-8 0"></path>
-                                </svg>
-                                <span class="desktop-only">Kosárba</span>
+                                Kosárba
                             </button>
                         </div>
                     </div>
                 </article>
 
-                <article class="product-card" data-product="6" data-category="nyaklanc">
+                <!-- Termék 6 -->
+                <article class="product-card" data-product="6">
                     <div class="product-image">
                         <div class="product-badge">LIMITÁLT</div>
                         <div class="product-img-placeholder" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">
                             <span class="placeholder-text">Epoxy Medál</span>
                         </div>
-                        <button class="quick-view-btn" onclick="quickView(6)">Gyors nézet</button>
                     </div>
                     <div class="product-info">
                         <h3 class="product-title">Golden Hour Medál</h3>
@@ -238,12 +192,7 @@
                         <div class="product-footer">
                             <span class="product-price">169 900 Ft</span>
                             <button class="btn-add-cart" onclick="addToCart(6, 'Golden Hour Medál', 169900)">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                                    <path d="M16 10a4 4 0 0 1-8 0"></path>
-                                </svg>
-                                <span class="desktop-only">Kosárba</span>
+                                Kosárba
                             </button>
                         </div>
                     </div>
@@ -252,67 +201,51 @@
         </div>
     </section>
 
-    <!-- About -->
+    <!-- Rólunk szekció -->
     <section id="rolunk" class="about">
         <div class="container">
             <div class="about-content">
                 <h2 class="section-title">Rólunk</h2>
-                <p>Az Epoxy Lux kézzel készített, egyedi epoxy ékszerek és dísztárgyak létrehozására szakosodott manufaktúra.</p>
+                <p>Az Epoxy Lux kézzel készített, egyedi epoxy ékszerek és dísztárgyak létrehozására szakosodott manufaktúra. Minden darabunk egyedi művészi alkotás, amelyben a természet szépsége és a modern design harmonikusan ötvöződik.</p>
                 <div class="features">
                     <div class="feature">
                         <div class="feature-icon">🎨</div>
-                        <h3>Kézműves</h3>
-                        <p>Egyedi darabok</p>
+                        <h3>Kézműves Minőség</h3>
+                        <p>Minden darab egyedi, kézzel készített</p>
                     </div>
                     <div class="feature">
                         <div class="feature-icon">♻️</div>
                         <h3>Környezetbarát</h3>
-                        <p>Fenntartható</p>
+                        <p>Fenntartható anyagok használata</p>
                     </div>
                     <div class="feature">
                         <div class="feature-icon">🎁</div>
-                        <h3>Luxus</h3>
-                        <p>Prémium csomag</p>
+                        <h3>Luxus Csomagolás</h3>
+                        <p>Prémium ajándékcsomagolás</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact -->
+    <!-- Kapcsolat -->
     <section id="kapcsolat" class="contact">
         <div class="container">
             <h2 class="section-title">Kapcsolat</h2>
             <div class="contact-grid">
                 <div class="contact-info">
-                    <h3>Írj nekünk</h3>
+                    <h3>Lépj kapcsolatba velünk</h3>
+                    <p>Kérdésed van? Szívesen segítünk!</p>
                     <div class="contact-details">
-                        <a href="mailto:info@epoxylux.hu" class="contact-link">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
-                            info@epoxylux.hu
-                        </a>
-                        <a href="tel:+36301234567" class="contact-link">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                            </svg>
-                            +36 30 123 4567
-                        </a>
-                        <div class="contact-link">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                <circle cx="12" cy="10" r="3"></circle>
-                            </svg>
-                            Budapest, Magyarország
-                        </div>
+                        <p>📧 info@epoxylux.hu</p>
+                        <p>📱 +36 30 123 4567</p>
+                        <p>📍 Budapest, Magyarország</p>
                     </div>
                 </div>
                 <form class="contact-form" onsubmit="return handleSubmit(event)">
                     <input type="text" placeholder="Név" required>
                     <input type="email" placeholder="Email" required>
-                    <textarea placeholder="Üzenet" rows="4" required></textarea>
+                    <textarea placeholder="Üzenet" rows="5" required></textarea>
                     <button type="submit" class="btn btn-primary">Küldés</button>
                 </form>
             </div>
@@ -329,26 +262,26 @@
                 </div>
                 <div class="footer-section">
                     <h4>Információ</h4>
-                    <a href="#szallitas">Szállítás</a>
-                    <a href="#visszakuldés">Visszaküldés</a>
-                    <a href="#aszf">ÁSZF</a>
+                    <a href="#">Szállítás</a>
+                    <a href="#">Visszaküldés</a>
+                    <a href="#">ÁSZF</a>
                 </div>
                 <div class="footer-section">
-                    <h4>Közösség</h4>
+                    <h4>Kövess minket</h4>
                     <div class="social-links">
-                        <a href="#" aria-label="Facebook">FB</a>
-                        <a href="#" aria-label="Instagram">IG</a>
-                        <a href="#" aria-label="Pinterest">PIN</a>
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Pinterest</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Epoxy Lux</p>
+                <p>&copy; 2025 Epoxy Lux. Minden jog fenntartva.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Cart Modal -->
+    <!-- Kosár modal -->
     <div class="modal" id="cartModal">
         <div class="modal-content">
             <div class="modal-header">
@@ -362,24 +295,13 @@
                 <div class="cart-total">
                     Összesen: <span id="cartTotal">0 Ft</span>
                 </div>
-                <button class="btn btn-primary btn-full" onclick="checkout()">Fizetés</button>
+                <button class="btn btn-primary" onclick="checkout()">Fizetés</button>
             </div>
         </div>
     </div>
 
-    <!-- Quick View Modal -->
-    <div class="modal" id="quickViewModal">
-        <div class="modal-content quick-view-content">
-            <button class="close-btn" onclick="closeQuickView()">&times;</button>
-            <div class="quick-view-body" id="quickViewBody">
-                <!-- Content injected by JS -->
-            </div>
-        </div>
-    </div>
-
-    <!-- Back to Top -->
-    <button class="back-to-top" id="backToTop" aria-label="Vissza"
-            ontouchstart="">↑</button>
+    <!-- Vissza a tetejére gomb -->
+    <button class="back-to-top" id="backToTop" aria-label="Vissza a tetejére">↑</button>
 
     <script src="script.js"></script>
 </body>
